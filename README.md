@@ -73,12 +73,12 @@ It's a full-stack Typescript app with some code generation in order to have a ty
 
 Here is a list of main technologies used:
 
--   🚀 React
--   🥇 NextJS to provide fast SSR experience
--   😍 TailwindCSS
--   📱 GraphQL, powered by Apollo tools
--   👮‍♂️ Auth0 for authentication
--   🚓 Prisma Framework to manage data model and database
+-   🚀 [React](https://github.com/facebook/react)
+-   🥇 [NextJS](https://github.com/zeit/next.js) to provide fast SSR experience
+-   😍 [TailwindCSS](https://github.com/tailwindcss/tailwindcss)
+-   📱 GraphQL, powered by [Apollo tools](https://github.com/apollographql)
+-   👮‍♂️ [Auth0](https://auth0.com/) for authentication
+-   🚓 [Prisma Framework](https://github.com/prisma/prisma2) to manage data model and database
 
 #### Repository structure — front-end
 
@@ -93,7 +93,7 @@ tottem/
 ├──── scenes # different parts of the application
 ├────── moduleName # Auth | Profile | Me ...
 ├──────── components # module components. **Each** components can specify its own specific components, queries, ...
-├──────── queries.gql # All data queries and mutation are written in gql files
+├──────── queries.gql # All data queries and mutations are written in gql files
 ├──────── hooks.ts # Most of the reusable logic is written in hooks
 ├──────── index.tsx # Main scene file
 ├──────── View.tsx # Sometime stateless component are isolated in View file for clarity or reusability
@@ -120,7 +120,7 @@ const items = (
 
 -   **Nexus** provides a code-first graphql approach that allows you to _generate_ graphql schema (`schema.graphql` file) based on your resolvers and object definitions. Nexus is fully compliant with prisma and offers a nice [plugin](https://github.com/prisma-labs/nexus-prisma) to automatically declare resolvers based on your photon client.
 
--   **g is configured to generateraphqthis`gen** query [tool](https://graphql-code-generator.com/) is configured to parse all `.gql` front-end files containing graphl queries and mutations. **graphql-codegen** uses remote and local (`localSchema.gql`) graphql schemas to generate every type and hook we need (putting them inside `types.ts`) so we can safely fetch and mutate data.
+-   **graphql-codegen** [tool](https://graphql-code-generator.com/) is configured to parse all `.gql` front-end files containing graphl queries and mutations. **graphql-codegen** uses remote and local (`localSchema.gql`) graphql schemas to generate every type and hook we need (putting them inside `types.ts`) so we can safely fetch and mutate data.
 
 > Note that when global state management is required, Apollo Client is used as much as possible.
 
@@ -134,7 +134,7 @@ const { data } = useGetItemsQuery({
     })
 ```
 
-🤯 No typo anymore, much less file & context switching with typescript.
+🤯 No typo anymore, much less file & context switching with typescript ✨
 
 #### Global state management
 
